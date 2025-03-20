@@ -1,5 +1,3 @@
-// Write the logic to get the computer choice
-// Write the logic to get the human choice
 // Declare the players score variables
     // humanScore and computerScore = 0
 // Write the logic to play a single round
@@ -20,8 +18,54 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     userInput = prompt("rock, paper or scissors?")
-    return userInput
+    return userInput.toLowerCase()
 }
 
-console.log(getComputerChoice())
-console.log(getHumanChoice())
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice === "rock") {
+        if (computerChoice === "scissors") {
+            humanScore += 1
+            console.log("You win! Rock beats Scissors.")
+            return
+        }
+        else if (computerChoice === "paper") {
+            computerScore += 1
+            console.log("You lose! Paper beats Rock.")
+            return
+        }
+    }
+    else if (humanChoice === "paper") {
+        if (computerChoice === "rock") {
+            humanScore += 1
+            console.log("You win! Paper beats Rock.")
+            return
+        }
+        else if (computerChoice === "scissors") {
+            computerScore += 1
+            console.log("You lose! Scissors beats Paper.")
+            return
+        }
+    }
+    else {
+        if (computerChoice === "paper") {
+            humanScore += 1
+            console.log("You win! Scissors beats Paper.")
+            return
+        }
+        else if (computerChoice === "rock") {
+            computerScore += 1
+            console.log("You lose! Rock beats Scissors.")
+            return
+        }
+    }
+    console.log('Tie! ${humanChoice} ties ${computerChoice}')
+    return
+}
+
+
+humanScore = 0
+computerScore = 0
+
+const humanSelection = getHumanChoice()
+const computerSelection = getComputerChoice()
+playRound(humanSelection, computerSelection)
