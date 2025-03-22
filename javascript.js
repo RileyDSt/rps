@@ -24,8 +24,7 @@ function playRound(humanChoice, computerChoice) {
             scores.textContent = `Player: ${humanScore}\nComputer: ${computerScore}`;
             if (humanScore === 5 || computerScore === 5)
                 endGame();
-            else
-                return;
+            return;
         }
         else if (computerChoice === "paper") {
             computerScore += 1;
@@ -33,8 +32,7 @@ function playRound(humanChoice, computerChoice) {
             scores.textContent = `Player: ${humanScore}\nComputer: ${computerScore}`;
             if (humanScore === 5 || computerScore === 5)
                 endGame();
-            else
-                return;
+            return;
         }
     }
     else if (humanChoice === "paper") {
@@ -44,8 +42,7 @@ function playRound(humanChoice, computerChoice) {
             scores.textContent = `Player: ${humanScore}\nComputer: ${computerScore}`;
             if (humanScore === 5 || computerScore === 5)
                 endGame();
-            else
-                return;
+            return;
         }
         else if (computerChoice === "scissors") {
             computerScore += 1;
@@ -53,8 +50,7 @@ function playRound(humanChoice, computerChoice) {
             scores.textContent = `Player: ${humanScore}\nComputer: ${computerScore}`;
             if (humanScore === 5 || computerScore === 5)
                 endGame();
-            else
-                return;
+            return;
         }
     }
     else {
