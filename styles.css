@@ -1,0 +1,21 @@
+button {
+    padding: 20px;
+    font-size: 60px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: greenyellow;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 700px;
+}
+
+div {
+    font-size: 20px;
+}
